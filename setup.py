@@ -1,8 +1,9 @@
+import setuptools
 from distutils.core import setup
 setup(
 	name='TKinterManagedFrame',
 	packages='TKinterManagedFrame',
-	version='0.0.2',
+	version='0.0.3',
 	license='GNU GPL',
 	description='Adds a Tkinter Frame class that offers simple update functionality',
 	author='Christopher "Arkevorkhat" Trent',
