@@ -14,7 +14,7 @@ class managedframe(Frame):
 		self.__master = master
 		self.config(**options)	
 		self.__frames = {str(n) : Frame(self) for n in nameList}
-		if not initialIndex in self.__frames.keys():
+		if not initialIndex in self.__frames.keys() and not initialIndex in nameList:
 			self.__frames[initialIndex] = Frame(self)
 		else:
 			self.__currentKey = initialIndex
@@ -81,16 +81,16 @@ class managedframe(Frame):
 		try:
 			self.addOption(inputFrame, key)
 			self.changeOption(key)
-		except KeyError as e:
-			raise KeyError from e
-	def removeOption(self, key, default='None'):
+		except KeyError:
+			raise KeyError
+	def removeOption(self, key, default=self.__frames.keys()[-1]):
 		"""
 		removes a frame from the manager.
 		if key is the currently displayed key, change to a default.
 		@raises KeyError if the key is not present.
 
 		"""
-		if not key in self.__frames.keys():
+		if not key in self.__frames.keys() or not default in self.__frames.keys():
 			raise KeyError
 		else:
 			if key == self.__currentKey:
