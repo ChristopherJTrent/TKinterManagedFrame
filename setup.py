@@ -12,7 +12,7 @@ setup(
 	long_description_content_type='text/markdown',
 	author='Christopher "Arkevorkhat" Trent',
 	url='https://github.com/ChristopherJTrent/TKinterManagedFrame',
-	install_requires=['tkinter','wheel'],
+	install_requires=['wheel'],
 	python_requires='>=3.3',
 	classifiers=[
 			  'Development Status :: 5 - Production/Stable', 
