@@ -3,11 +3,11 @@ from distutils.core import setup
 with open('README.md') as file_:
 	long_description = file_.read()
 setup(
-	name='TKinterManagedFrame',
+	name='Tkinter Managed Frame',
 	packages=['TKinterManagedFrame'],
-	version='0.1.0',
+	version='1.0.0',
 	license='GNU GPL',
-	description='Adds a Tkinter Frame class that offers simple update functionality',
+	description='Adds a Tkinter Frame subclass that offers simple update functionality',
 	long_description=long_description,
 	long_description_content_type='text/markdown',
 	author='Christopher "Arkevorkhat" Trent',
@@ -15,7 +15,7 @@ setup(
 	install_requires=['tkinter','wheel'],
 	python_requires='>=3.3',
 	classifiers=[
-			  'Development Status :: 3 - Alpha', 
+			  'Development Status :: 5 - Production/Stable', 
 			  'Intended Audience :: Developers',
 			  'Topic :: Software Development :: Libraries :: Tcl Extensions',
 			  'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
