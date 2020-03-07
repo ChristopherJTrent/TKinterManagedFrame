@@ -5,7 +5,7 @@ with open('README.md') as file_:
 setup(
 	name='TKinterManagedFrame',
 	packages=['TKinterManagedFrame'],
-	version='0.0.5',
+	version='0.1.0',
 	license='GNU GPL',
 	description='Adds a Tkinter Frame class that offers simple update functionality',
 	long_description=long_description,
